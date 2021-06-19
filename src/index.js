@@ -19,6 +19,4 @@ app.get('/auth/github/callback',
     });
   });
 
-console.log("https://github.com/login/oauth/authorize?client_id=176eada057a4bbd96736");
-
 app.listen(3000);

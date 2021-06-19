@@ -1,4 +1,4 @@
 CONFIG=PATH TO YOUR PF CONFIG FILE 
 CLIENT_ID=176eada057a6bbd96736
 CLIENT_SECRET=f7f8bb61e2066a22a10803613b6620c02dbde483
-CALLBACK_URL=http://127.0.0.1:3000/auth/github/callback
+CALLBACK_URL=https://api.fonoster.net/auth/github/callback
