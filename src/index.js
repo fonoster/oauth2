@@ -15,7 +15,8 @@ app.get('/auth/github/callback',
       title: "PF Server (Demo Server)",
       message: "PF Server (Demo Server)",
       accessKeyId: req.user.username,
-      accessKeySecret: response.token
+      accessKeySecret: response.token,
+      endpoint: process.env.ENDPOINT,
     });
   });
 
