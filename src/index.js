@@ -9,7 +9,7 @@ app.get('/auth/github/callback',
   passport.authenticate('github', { failureRedirect: '/login' }),
   async (req, res) => {
     const auth = new Auth();
-    const response = await auth.createToken({ accessKeyId: req.user.username, role: 'USER' });
+    const response = await auth.createToken({ accessKeyId: req.user.username, roleName: 'USER' });
 
     res.render("index", {
       title: "PF Server (Demo Server)",
