@@ -1,0 +1,13 @@
+html
+  head
+    title= title
+  body
+    h3= message
+    div
+      p1= "Access Key Id:"
+      input(name= "accces-key-id" type= 'email' value= accessKeyId style= "width: 100%" readonly)
+    br
+    div
+      p2= "Access Key Secret:"
+      textarea(name= "accces-key-secret" readonly style= "width: 100%")
+        | #{accessKeySecret}

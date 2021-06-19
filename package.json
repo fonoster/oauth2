@@ -1,0 +1,28 @@
+{
+  "name": "ghauth",
+  "version": "0.1.0",
+  "description": "Github authentication service for PF",
+  "main": "index.js",
+  "bin": {
+    "run": "./src/index.js",
+    "healthcheck": "./src/healthcheck.js"
+  },
+  "scripts": {
+    "start": "cross-env NODE_ENV=dev nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pedro Sanders <psanders@fonoster.como>",
+  "license": "MIT",
+  "dependencies": {
+    "@fonos/auth": "^0.0.119",
+    "express": "^4.17.1",
+    "passport": "^0.4.1",
+    "passport-github2": "^0.1.12",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^10.0.0",
+    "nodemon": "^2.0.7"
+  }
+}
