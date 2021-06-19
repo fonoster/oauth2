@@ -1,4 +1,6 @@
-## Github Authentication Service (Oauth2 )
+# Github Oauth2 for Demo Server
+
+[![publish to docker hub](https://github.com/fonoster/ghauth/actions/workflows/gh-docker.yml/badge.svg)](https://github.com/fonoster/ghauth/actions/workflows/gh-docker.yml)
 
 To start:
 

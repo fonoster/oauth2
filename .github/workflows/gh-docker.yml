@@ -1,0 +1,29 @@
+name: publish to docker hub
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version number'
+        required: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '14'
+      - name: Write release version
+        env:
+          FONOS_VERSION: ${{ github.event.inputs.version }}
+        run: |
+          sed -i.bak s/#{FONOS_VERSION}/${FONOS_VERSION}/ package.json
+      - name: Publish
+        uses: elgohr/Publish-Docker-Github-Action@master
+        with:
+          name: fonoster/ghauth
+          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_PASSWORD }}
+          workdir: .
+          tags: "latest, ${{ github.event.inputs.version }}"
