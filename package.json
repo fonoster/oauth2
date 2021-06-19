@@ -1,6 +1,6 @@
 {
   "name": "ghauth",
-  "version": "0.1.0",
+  "version": "#{FONOS_VERSION}",
   "description": "Github authentication service for PF",
   "main": "index.js",
   "bin": {
@@ -14,7 +14,7 @@
   "author": "Pedro Sanders <psanders@fonoster.como>",
   "license": "MIT",
   "dependencies": {
-    "@fonos/auth": "^0.0.119",
+    "@fonos/auth": "^#{FONOS_VERSION}",
     "express": "^4.17.1",
     "passport": "^0.4.1",
     "passport-github2": "^0.1.12",
