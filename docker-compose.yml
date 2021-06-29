@@ -17,6 +17,9 @@ services:
       - CLIENT_SECRET
       - CALLBACK_URL
       - ENDPOINT
+      - PAGE_TITLE
+      - PAGE_MESSAGE
+      - ACCESS_LIST
     volumes:
       - ${CONFIG}/config:/home/fonos/.fonos/config
     networks:
