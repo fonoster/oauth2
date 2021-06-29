@@ -17,7 +17,7 @@ app.get('/auth/github/callback',
         res.render("unauthorized", {
           message: `The username "${req.user.username}" is not in access list. Please contact administrator.`
         });
-        return
+        return;
       }
     }
 
