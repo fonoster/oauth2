@@ -4,14 +4,14 @@ html
   body
     h2= message
     div
-      p1= "API Endpoint"
+      p= "API Endpoint"
       input(name= "endpoint" value= endpoint style= "width: 100%" readonly)
     br
     div
-      p1= "Access Key Id"
+      p= "Access Key Id"
       input(name= "accces-key-id" value= accessKeyId style= "width: 100%" readonly)
     br
     div
-      p2= "Access Key Secret"
+      p= "Access Key Secret"
       textarea(name= "accces-key-secret" readonly style= "width: 100%")
         | #{accessKeySecret}

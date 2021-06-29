@@ -11,9 +11,19 @@ app.get('/auth/github/callback',
     const auth = new Auth();
     const response = await auth.createToken({ accessKeyId: req.user.username, roleName: 'USER' });
 
+    if (process.env.ACCESS_LIST) {
+      const allowedUsers = process.env.ACCESS_LIST.split(",");
+      if (!allowedUsers.includes(req.user.username)) {
+        res.render("unauthorized", {
+          message: `The username "${req.user.username}" is not in access list. Please contact administrator.`
+        });
+        return
+      }
+    }
+
     res.render("index", {
-      title: "PF Server (Demo Server)",
-      message: "PF Server (Demo Server)",
+      title: process.env.PAGE_TITLE || "PF Access Information",
+      message: process.env.PAGE_MESSAGE || "PF Access Information",
       accessKeyId: req.user.username,
       accessKeySecret: response.token,
       endpoint: process.env.ENDPOINT,
