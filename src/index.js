@@ -15,7 +15,7 @@ app.get('/auth/github/callback',
       const allowedUsers = process.env.ACCESS_LIST.split(",");
       if (!allowedUsers.includes(req.user.username)) {
         res.render("unauthorized", {
-          message: `The username "${req.user.username}" is not in access list. Please contact administrator.`
+          message: `The username "${req.user.username}" is not in the access list. Please contact the administrator.`
         });
         return;
       }
