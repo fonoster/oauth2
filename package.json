@@ -1,6 +1,6 @@
 {
   "name": "oauth2",
-  "version": "#{FONOS_VERSION}",
+  "version": "0.1",
   "description": "Github authentication service for PF",
   "main": "index.js",
   "bin": {
