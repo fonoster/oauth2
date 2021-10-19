@@ -5,13 +5,13 @@ networks:
 
 services:
 
-  ghauth:
-    image: fonoster/ghauth:latest
+  oauth2:
+    image: fonoster/oauth2:latest
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.ghauth.entrypoints=websecure"
-      - "traefik.http.services.ghauth.loadbalancer.server.port=3000"
-      - "traefik.http.routers.ghauth.rule=PathPrefix(`/auth/github/callback`)"
+      - "traefik.http.routers.oauth2.entrypoints=websecure"
+      - "traefik.http.services.oauth2.loadbalancer.server.port=3000"
+      - "traefik.http.routers.oauth2.rule=PathPrefix(`/auth/github/callback`)"
     environment: 
       - CLIENT_ID
       - CLIENT_SECRET
