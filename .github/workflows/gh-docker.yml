@@ -16,9 +16,9 @@ jobs:
           node-version: '14'
       - name: Write release version
         env:
-          FONOS_VERSION: ${{ github.event.inputs.version }}
+          FONOSTER_VERSION: ${{ github.event.inputs.version }}
         run: |
-          sed -i.bak s/#{FONOS_VERSION}/${FONOS_VERSION}/ package.json
+          sed -i.bak s/#{FONOSTER_VERSION}/${FONOSTER_VERSION}/ package.json
       - name: Publish
         uses: elgohr/Publish-Docker-Github-Action@master
         with:

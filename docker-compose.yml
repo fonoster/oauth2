@@ -1,7 +1,7 @@
 version: '3.3'
 
 networks:
-  fonos:
+  fonoster:
 
 services:
 
@@ -21,6 +21,6 @@ services:
       - PAGE_MESSAGE
       - ACCESS_LIST
     volumes:
-      - ${CONFIG}/config:/home/fonos/.fonos/config
+      - ${CONFIG}/config:/home/fonoster/.fonoster/config
     networks:
-      fonos:
+      fonoster:
