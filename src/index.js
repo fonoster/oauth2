@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const Auth = require("@fonos/auth").default;
+const Auth = require("@fonoster/auth").default;
 const { app, passport } = require("./config");
 
 app.get('/auth/github',
