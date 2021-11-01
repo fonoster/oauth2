@@ -14,7 +14,7 @@
   "author": "Pedro Sanders <psanders@fonoster.com>",
   "license": "MIT",
   "dependencies": {
-    "@fonos/auth": "^#{FONOS_VERSION}",
+    "@fonoster/auth": "^#{FONOSTER_VERSION}",
     "express": "^4.17.1",
     "passport": "^0.4.1",
     "passport-github2": "^0.1.12",
